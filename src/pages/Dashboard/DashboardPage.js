@@ -9,10 +9,7 @@ import { toast } from "react-toastify";
 export const DashboardPage = () => {
   const [orders, setOrders] = useState([]);
   useTitle("Dashboard");
-
-  const token = JSON.parse(sessionStorage.getItem("token"));
-  const userId = JSON.parse(sessionStorage.getItem("userId"));
-
+  
   useEffect(() => {
     async function fetchOrders() {
       try {
